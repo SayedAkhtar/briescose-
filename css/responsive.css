@@ -1,0 +1,35 @@
+@media (max-width: 500px){
+    .superheader{
+        display: none;
+    }
+    #desktop-nav{
+        display: none;
+    }
+    .headerSearch{
+        display: none;
+    }
+    aside{
+        display: none;
+    }
+    .content main{
+        flex-basis: 100%;
+    }
+    .productList .row .col-md-4.col-sm-6 {
+        width: 50%;
+    }
+
+    
+    .our-partners--logo-container{
+        flex-wrap: wrap;
+        /* margin: 10px; */
+    }
+    .our-partners--logo-container img{
+        margin: 10px;
+    }
+    .subfooter .attributions a:not(:first-child){
+        border-left: none;
+    }
+    .subfooter .container{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&display=swap');
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+:root{
+  --subtextcolor: #828282;
+  --primarycolor: #185ea7;
+  --secondarycolor: #072369;
+}
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+body{
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+
+.row{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+.col-md-3{
+
+}
+
+
+
+.superheader{
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid var(--subtextcolor);
+  padding: 10px;
+}
+.superheader a{
+  font-size: 14px;
+  color: var(--subtextcolor);
+  font-weight: 400;
+  text-transform: none;
+  text-decoration: none;
+  padding: 0px 10px;
+}
+
+.siteheader{
+  padding: 12px opx;
+}
+.siteheader .container{
+  padding: 0px 16px;
+}
+
+.sitelogo{
+  padding: 4px 0px;
+  
+  display: flex;
+}
+
+.sitelogo img{
+  display: flex;
+  max-height: 64px;
+  max-width: 100%;
+  height: auto;
+  min-width: 11.25rem;
+}
+
+.headerSiteIcons{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.headerSiteIcons a{
+  font-size: 30px;
+  margin-left: 20px;
+  color: #000;
+}
+.cart-icon{
+  transform: scaleX(-1);
+}
+
+.headerSearch{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-form-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  max-width: 500px;
+  font-size: 14px;
+}
+
+.search-form{
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+}
+
+.search-form-container form input{
+  border: none;
+  outline: none;
+
+}
+span#search-button {
+  color: #ddd;
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+nav{
+  background-color: var(--primarycolor);
+  position: relative;
+}
+
+.nav-menu__container{
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.nav-menu--list{
+  list-style: none;
+  text-decoration: none;
+  display: inline;
+  margin: 0 auto;
+}
+
+.nav-menu--list a{
+  display: inline-block;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 0.875rem;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.sub-nav{
+  width: 100%;
+  position: relative;
+  background-color: var(--secondarycolor);
+}
+
+.sub-nav p{ 
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  background-color: var(--secondarycolor);
+  margin: 0px;
+  padding: 10px 0px;
+}
+
+.sub-nav span{
+  display: none;
+}
+
+.mega-menu{
+  background-color: #fff;
+  height: 40vh;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+}
+
+.mega-menu.sub-container{
+
+  display: none;
+}
+
+.mega-menu.sub-container.active{
+  display: flex;
+}
+
+.megaMenuTab .row{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.megaMenuTab{
+  width: 100%;
+  height: 100%;
+}
+
+.megaMenuTab-colLeft {
+  
+}
+.megaMenuTab-colLeft {
+  background: #e5e5e5;
+  max-width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+.megaMenuTab-colRight {
+  height: 100%;
+  background: #fefefe;
+  margin: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.megaMenuTab-colRight .tab-panel {
+  height: 100%;
+  overflow-y: scroll;
+  display: none;
+}
+
+.megaMenuTab-colRight .tab-panel.active{
+  display: block;
+}
+
+.megaMenuTab-nav-category{
+  text-decoration: none;
+  margin-left: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.megaMenuTab-nav-category li a{
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 10px 0px;
+  padding: 5px 0px;
+  display: block;
+}
+
+.megaMenuTab-category-name{
+  text-decoration: none;
+  border-bottom: 1px solid #888;
+}
+
+.megaMenuTab-category-name a{
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.megaMenuTab-subcategory{
+  height: 100%;
+}
+
+.megaMenuTab-subcategory a{
+  text-decoration: none;
+  color: #222;
+}
+
+.linkList-wrapper{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.linkList li:hover a{
+  text-decoration: underline;
+}
+
+.linkList li:first-child a{
+  font-weight: 600;
+  font-size: 14px;
+}
+.linkList li:not(:first-child) a{
+  font-weight: 400;
+  font-size: 12px;
+}
+
+
+
+
+.page-title{
+  min-height: 300px;
+  width: 100%;
+  background-image: url('https://www.briscoes.co.nz/contentassets/4560079ddaf14258a672abe4923c84a3/blankets.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+}
+
+.page-title p{
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-shadow: 0px 0px 21px rgba(0,0,0,0.9);
+}
+
+.breadcrumb-container.container{
+  margin-top: 20px;
+}
+
+.breadcrumb-container.container a {
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  padding-right: 25px;
+  font-weight: 600;
+  position: relative;
+}
+
+.breadcrumb-container.container a::after{
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  height: 6px;
+  width: 6px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(-45deg);
+
+}
+
+.breadcrumb-container.container a:last-child{
+  font-weight: 400;
+  padding-right: 0px;
+}
+
+.breadcrumb-container.container a:last-child::after{
+  display: none;
+}
+
+
+.content{
+  display: flex;
+  flex-basis: 30%;
+  margin: 48px 0px;
+}
+
+.content aside{
+  padding: 0rem 3rem;
+  flex-basis: 30%;
+}
+
+.content aside .filter-header{
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #000;
+}
+
+.content aside .filter-header span{
+
+}
+#clear-filter{
+  cursor: pointer;
+}
+
+.category-list{
+  padding-left: 0px;
+  font-size: 14px;
+}
+
+.category-list--item{
+  list-style: none;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  border-bottom: 1px solid #888;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content main{
+  flex-basis: 70%;
+}
+
+.productCard{
+  display: block;
+  margin: 1.5rem 10px;
+  /* max-width: 200px; */
+}
+
+.productImage{
+  position: relative;
+  display: block;
+  border: 1px solid #9999;
+}
+
+.productImage span{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: #f9cc48;
+  padding: 8px 16px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.productImage--img{
+  display: block;
+  max-width: 100%;
+  padding: 1.2rem 0.6rem;
+}
+
+.productBody{
+
+}
+
+.productBody .title{
+  font-weight: 300;
+  transition: all 0.5s ease;
+}
+
+.productBody .title:hover{
+  text-decoration: underline;
+}
+
+.productBody .price{
+  color: red;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+
+
+
+.our-partners{
+  background-color: var(--primarycolor);
+  border-bottom:rgba(255, 255, 255, 0.4) 1.5px solid;
+}
+
+.our-partners--logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.our-partners--logo-container img {
+  display: block;
+  height: 30px;
+  margin: 0px 13px;
+}
+
+footer{
+  padding: 2.75rem 0px;
+  background-color: var(--primarycolor);
+  color: #fff;
+}
+
+footer .container{
+  max-width: 1170px;
+}
+
+footer h4{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer-nav{
+  margin-left: 0px;
+  padding-left: 0px;
+  margin-top: 25px;
+}
+
+.footer-nav--links{
+  list-style: none;
+  font-weight: 400;
+  font-size: 15px;
+
+}
+
+.footer-nav--links:not(:last-child){
+  margin-bottom: 10px;
+}
+.subfooter{
+  background-color: var(--secondarycolor);
+  padding: 1.375rem 0.75rem ;
+}
+
+.subfooter .container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.subfooter .attributions{
+  
+}
+
+.subfooter .attributions a{
+  padding: 10px;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.subfooter .attributions a:not(:first-child) {
+  border-left: 1px solid #fff;
+}
+
+.subfooter .social-links{
+  display: flex;
+}
+
+.subfooter .social-links a{
+  background-color: #fff;
+  color: var(--secondarycolor);
+  padding: 8px;
+  margin: 10px;
+  border-radius: 100%;
+  width:2.1875rem;
+  height:2.1875rem;
+  display: block;
+}

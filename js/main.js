@@ -8,36 +8,53 @@ var mobileMainUL = document.querySelector('.slider-menu__menu');
 var mobileMainLI= document.querySelectorAll('.slider-menu__item.has-sub');
 var mobileSubMenuBackBtn = document.querySelector('#slidingMenuMobile-wapper .slider-menu__main');
 
+var megaMenuOpen = false;
+
+document.querySelector("#desktop-nav .nav-menu__container").addEventListener('mouseenter', (event)=>{
+
+});
+
+document.querySelector("#desktop-nav .nav-menu__container").addEventListener('mouseleave', (event)=>{
+    removeClassFromElement(document.querySelectorAll('.mega-menu.sub-container'))
+});
 
 megaList.forEach((element) => {
-    // console.log(element);
+
     element.addEventListener('mouseenter', (event)=>{
             removeClassFromElement(document.querySelectorAll('.mega-menu'))
-            // console.log(event.target);
             var cls = element.classList.contains('is-mega')
             if(cls){
                 element.querySelector('.mega-menu').classList.add('active')
             }
-        
-        // var children = event.target.childNodes;
-        // console.log(event.target.childNodes);
+            document.querySelector('.megaMenuTab-colRight').childNodes[1].classList.add('active')
+            megaMenuOpen = true;
+            element.querySelectorAll('.megaMenuTab-colRight .tab-panel')[0].classList.add('active'); 
+            element.querySelectorAll('.megaMenuTab-colLeft li a')[0].classList.add('active');   
     });
-    element.addEventListener('mouseleave', (event) => {
-        removeClassFromElement(document.querySelectorAll('.mega-menu'))
+
+    element.addEventListener('mouseleave', (event)=> {
+        // console.log(element.querySelector('.mega-menu.sub-container'));
+        // console.log("Event :",event); 
+        
+
     });
 });
 
 megaSubList.forEach((element) => {
     element.addEventListener('mouseenter', (event)=>{
+        document.querySelectorAll('.megaMenuTab-colRight .tab-panel')[0].classList.add('active');
         var selectedId = event.target.dataset.id;
+        event.target.classList.add('active')
         removeClassFromElement(document.querySelectorAll('.megaMenuTab-colRight .tab-panel'));
+        removeClassFromElement(document.querySelectorAll('.megaMenuTab-colLeft li a'));
         var toBeDisplayed = document.querySelector(`.sub-container.active .megaMenuTab-colRight #${selectedId}`);
         toBeDisplayed.classList.add('active');
+
     });
 
-    // element.addEventListener('mouseleave', (event)=>{
-    //     removeClassFromElement(document.querySelectorAll('.megaMenuTab-colRight .tab-panel'));
-    // });
+    element.addEventListener('mouseleave', (event)=>{
+        
+    });
     
 });
 
